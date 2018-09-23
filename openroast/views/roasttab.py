@@ -86,7 +86,7 @@ class RoastTab(QtWidgets.QWidget):
             return False
 
     def graph_get_data(self):
-        self.graphWidget.append_x(self.roaster.current_temp)
+        self.graphWidget.append_x(self.roaster.current_temp, self.roaster.heat_setting, self.roaster.fan_speed)
 
     def save_roast_graph(self):
         self.graphWidget.save_roast_graph()
