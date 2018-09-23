@@ -67,8 +67,9 @@ class RoastGraphWidget():
         self.graphFigure.clear()
 
         self.graphAxes = self.graphFigure.add_subplot(111)
-        self.graphAxes.plot_date(self.graphXValueList, self.graphYValueList,
-            '#8ab71b', self.graphXValueList, self.graphY2PowValueList, '#8b0000', self.graphXValueList, self.graphY3FanValueList, '#ffd700')
+        self.graphAxes.plot_date(self.graphXValueList, self.graphYValueList, '#8ab71b')
+        self.graphAxes.plot_date(self.graphXValueList, self.graphY2PowValueList, '#8b0000')
+        self.graphAxes.plot_date(self.graphXValueList, self.graphY3FanValueList, '#ffd700')
 
         # Add formatting to the graphs.
         self.graphAxes.set_ylabel('TEMPERATURE (°F)')
