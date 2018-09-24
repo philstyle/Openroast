@@ -38,7 +38,7 @@ class RoastGraphWidget():
         graphWidget.setObjectName("graph")
 
         # Style attributes of matplotlib.
-        matplotlib.rcParams['lines.linewidth'] = 3
+        matplotlib.rcParams['lines.linewidth'] = 1
         matplotlib.rcParams['lines.color'] = '#2a2a2a'
         matplotlib.rcParams['font.size'] = 10.
         self.graphFigure = Figure(facecolor='#444952')
@@ -93,8 +93,8 @@ class RoastGraphWidget():
         currentTime = datetime.datetime.fromtimestamp(self.counter)
         self.graphXValueList.append(matplotlib.dates.date2num(currentTime))
         self.graphYValueList.append(xCoord)
-        self.graphY2PowValueList.append(y2pow*100)
-        self.graphY3FanValueList.append(y3fan*50)
+        self.graphY2PowValueList.append(100+(y2pow*30))
+        self.graphY3FanValueList.append(200+(y3fan*10))
 
     def clear_graph(self):
         self.graphXValueList = []
